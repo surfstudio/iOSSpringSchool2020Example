@@ -42,32 +42,7 @@
                     <view key="view" contentMode="scaleToFill" id="DV8-QE-hgw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6a-93-xl1">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpU-Do-tKC">
-                                        <rect key="frame" x="18" y="28" width="33" height="28"/>
-                                        <state key="normal" title=" " image="close"/>
-                                        <connections>
-                                            <action selector="closeAction:" destination="Psh-MS-lR5" eventType="touchUpInside" id="2cP-cK-6V0"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="cpU-Do-tKC" secondAttribute="bottom" constant="8" id="On0-TU-kCa"/>
-                                    <constraint firstAttribute="height" constant="64" id="Toj-Gd-lcM"/>
-                                    <constraint firstItem="cpU-Do-tKC" firstAttribute="leading" secondItem="D6a-93-xl1" secondAttribute="leading" constant="18" id="Zm0-Ea-3La"/>
-                                </constraints>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="D6a-93-xl1" firstAttribute="top" secondItem="DV8-QE-hgw" secondAttribute="top" id="DUe-Vb-wxo"/>
-                            <constraint firstItem="2J1-xl-HaT" firstAttribute="trailing" secondItem="D6a-93-xl1" secondAttribute="trailing" id="RWZ-UV-FED"/>
-                            <constraint firstItem="D6a-93-xl1" firstAttribute="leading" secondItem="2J1-xl-HaT" secondAttribute="leading" id="gIc-VM-Q1g"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2J1-xl-HaT"/>
                     </view>
                 </viewController>
@@ -76,7 +51,4 @@
             <point key="canvasLocation" x="1055" y="90"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="close" width="28" height="28"/>
-    </resources>
 </document>

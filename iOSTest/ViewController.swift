@@ -18,8 +18,11 @@ class ViewController: UIViewController {
     @IBAction func detailAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController")
-        detailViewController.modalPresentationStyle = .overFullScreen
-        present(detailViewController, animated: true, completion: nil)
+
+        let navigationController = UINavigationController(rootViewController: detailViewController)
+        navigationController.modalPresentationStyle = .overFullScreen
+
+        present(navigationController, animated: true, completion: nil)
     }
 
 }

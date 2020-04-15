@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CF3970D2447053A00715486 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF3970C2447053A00715486 /* DetailViewController.swift */; };
 		57D2BB40243DB234007027D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2BB3F243DB234007027D3 /* AppDelegate.swift */; };
-		57D2BB42243DB234007027D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2BB41243DB234007027D3 /* SceneDelegate.swift */; };
 		57D2BB44243DB234007027D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2BB43243DB234007027D3 /* ViewController.swift */; };
 		57D2BB47243DB234007027D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57D2BB45243DB234007027D3 /* Main.storyboard */; };
 		57D2BB49243DB236007027D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57D2BB48243DB236007027D3 /* Assets.xcassets */; };
 		57D2BB4C243DB236007027D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57D2BB4A243DB236007027D3 /* LaunchScreen.storyboard */; };
 		57D2BB57243DB236007027D3 /* iOSTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2BB56243DB236007027D3 /* iOSTestTests.swift */; };
-		57D2BB62243DB9BE007027D3 /* TestHello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2BB61243DB9BE007027D3 /* TestHello.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,9 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3CF3970C2447053A00715486 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		57D2BB3C243DB234007027D3 /* iOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D2BB3F243DB234007027D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		57D2BB41243DB234007027D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		57D2BB43243DB234007027D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		57D2BB46243DB234007027D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57D2BB48243DB236007027D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,7 +38,6 @@
 		57D2BB52243DB236007027D3 /* iOSTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D2BB56243DB236007027D3 /* iOSTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTestTests.swift; sourceTree = "<group>"; };
 		57D2BB58243DB236007027D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		57D2BB61243DB9BE007027D3 /* TestHello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHello.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,13 +81,12 @@
 			isa = PBXGroup;
 			children = (
 				57D2BB3F243DB234007027D3 /* AppDelegate.swift */,
-				57D2BB41243DB234007027D3 /* SceneDelegate.swift */,
 				57D2BB43243DB234007027D3 /* ViewController.swift */,
 				57D2BB45243DB234007027D3 /* Main.storyboard */,
 				57D2BB48243DB236007027D3 /* Assets.xcassets */,
 				57D2BB4A243DB236007027D3 /* LaunchScreen.storyboard */,
 				57D2BB4D243DB236007027D3 /* Info.plist */,
-				57D2BB61243DB9BE007027D3 /* TestHello.swift */,
+				3CF3970C2447053A00715486 /* DetailViewController.swift */,
 			);
 			path = iOSTest;
 			sourceTree = "<group>";
@@ -212,10 +209,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CF3970D2447053A00715486 /* DetailViewController.swift in Sources */,
 				57D2BB44243DB234007027D3 /* ViewController.swift in Sources */,
 				57D2BB40243DB234007027D3 /* AppDelegate.swift in Sources */,
-				57D2BB62243DB9BE007027D3 /* TestHello.swift in Sources */,
-				57D2BB42243DB234007027D3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

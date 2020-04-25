@@ -17,8 +17,8 @@ class ImageTableCell: UITableViewCell {
 
         selectionStyle = .none
 
-        customImageView.image = UIImage(named: "customImage")
-        customImageView.contentMode = .scaleAspectFill
+//        customImageView.image = UIImage(named: "customImage")
+//        customImageView.contentMode = .center
     }
 
     override func setHighlighted(_ highlighted: Bool, animated: Bool) {

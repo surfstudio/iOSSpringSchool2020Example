@@ -5,12 +5,19 @@
 //  Created by Александр Филимонов on 20/04/2020.
 //  Copyright © 2020 Surf. All rights reserved.
 //
-
 import UIKit
 
 class MainPageViewController: UIViewController {
 
+    // MARK: - Constants
+
+    private enum Constants {
+        static let defaultCount = 4
+    }
+
     @IBOutlet weak var tableView: UITableView!
+
+    var photos = [PhotoModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +34,8 @@ class MainPageViewController: UIViewController {
                            forCellReuseIdentifier: "headerCell")
         tableView.separatorStyle = .none
         tableView.contentInsetAdjustmentBehavior = .never
+
+        loadData()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -34,12 +43,24 @@ class MainPageViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
+    func loadData() {
+        let service = BaseService()
+
+        service.loadPhotos(onComplete: { [weak self] (photos) in
+            self?.photos = photos
+            print("photos count", photos.count)
+            self?.tableView.reloadData()
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
+
 }
 
 extension MainPageViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 14
+        return photos.count + Constants.defaultCount
     }
 
     func tableView(_ tableView: UITableView,
@@ -60,7 +81,12 @@ extension MainPageViewController: UITableViewDataSource, UITableViewDelegate {
             cell.titleLabel.text = "New"
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath)
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as? ImageTableCell else {
+                return UITableViewCell()
+            }
+            let model = photos[indexPath.row - Constants.defaultCount]
+            cell.customImageView.loadImage(by: model.urls.regular)
+            cell.textLabel?.text = model.description
             return cell
         }
     }

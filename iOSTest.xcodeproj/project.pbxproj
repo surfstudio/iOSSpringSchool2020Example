@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00BF2AD324502AAB00BEE686 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF2AD224502AAB00BEE686 /* NetworkConstants.swift */; };
+		00BF2AD624502B9700BEE686 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF2AD524502B9700BEE686 /* BaseService.swift */; };
+		00BF2AD924502F5B00BEE686 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF2AD824502F5B00BEE686 /* PhotoModel.swift */; };
+		00BF2ADD2450334D00BEE686 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BF2ADC2450334D00BEE686 /* UIImageView.swift */; };
 		3CF3970D2447053A00715486 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF3970C2447053A00715486 /* DetailViewController.swift */; };
 		57D2BB40243DB234007027D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2BB3F243DB234007027D3 /* AppDelegate.swift */; };
 		57D2BB44243DB234007027D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2BB43243DB234007027D3 /* ViewController.swift */; };
@@ -39,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00BF2AD224502AAB00BEE686 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		00BF2AD524502B9700BEE686 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		00BF2AD824502F5B00BEE686 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
+		00BF2ADC2450334D00BEE686 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		3CF3970C2447053A00715486 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		57D2BB3C243DB234007027D3 /* iOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D2BB3F243DB234007027D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +90,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00BF2AD124502A9700BEE686 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				00BF2AD224502AAB00BEE686 /* NetworkConstants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		00BF2AD424502B7900BEE686 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				00BF2AD524502B9700BEE686 /* BaseService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		00BF2AD724502F4B00BEE686 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				00BF2AD824502F5B00BEE686 /* PhotoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		00BF2ADA2450333000BEE686 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				00BF2ADB2450333700BEE686 /* Extensions */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		00BF2ADB2450333700BEE686 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				00BF2ADC2450334D00BEE686 /* UIImageView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		57D2BB33243DB234007027D3 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +152,10 @@
 		57D2BB3E243DB234007027D3 /* iOSTest */ = {
 			isa = PBXGroup;
 			children = (
+				00BF2ADA2450333000BEE686 /* Library */,
+				00BF2AD724502F4B00BEE686 /* Models */,
+				00BF2AD424502B7900BEE686 /* Service */,
+				00BF2AD124502A9700BEE686 /* Resources */,
 				D67F7BB0244DBC5600BDE8B5 /* Main Page */,
 				57D2BB3F243DB234007027D3 /* AppDelegate.swift */,
 				57D2BB43243DB234007027D3 /* ViewController.swift */,
@@ -276,13 +328,17 @@
 			files = (
 				D67F7BAA244DA3FD00BDE8B5 /* CarouselTableCell.swift in Sources */,
 				D67F7B9F244D9CB900BDE8B5 /* MainPageViewController.swift in Sources */,
+				00BF2ADD2450334D00BEE686 /* UIImageView.swift in Sources */,
+				00BF2AD324502AAB00BEE686 /* NetworkConstants.swift in Sources */,
 				D67F7BB4244DBC8700BDE8B5 /* MainPageHeaderView.swift in Sources */,
 				3CF3970D2447053A00715486 /* DetailViewController.swift in Sources */,
 				D67F7BAE244DA55F00BDE8B5 /* CollectionImageCell.swift in Sources */,
 				57D2BB44243DB234007027D3 /* ViewController.swift in Sources */,
 				57D2BB40243DB234007027D3 /* AppDelegate.swift in Sources */,
+				00BF2AD624502B9700BEE686 /* BaseService.swift in Sources */,
 				D67F7BA2244D9F9300BDE8B5 /* ImageTableCell.swift in Sources */,
 				D67F7BA6244DA21A00BDE8B5 /* TitleTableCell.swift in Sources */,
+				00BF2AD924502F5B00BEE686 /* PhotoModel.swift in Sources */,
 				D67F7BB7244DE5B300BDE8B5 /* MainPageHeaderTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

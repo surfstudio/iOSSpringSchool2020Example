@@ -17,7 +17,7 @@ class BaseService {
 
     func loadPhotos(onComplete: @escaping ([PhotoModel]) -> Void, onError: @escaping (Error) -> Void) {
 
-        let urlString = NetworkConstants.baseURL + "/photos?client_id=" + NetworkConstants.accessKey
+        let urlString = NetworkConstants.baseURL + "/photos/random?count=10&client_id=" + NetworkConstants.accessKey
 
         let url = URL(string: urlString)!
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -27,13 +27,17 @@ class BaseService {
             }
 
             guard let data = data else {
-                onError(ServerError.noDataProvided)
+                DispatchQueue.main.async {
+                    onError(ServerError.noDataProvided)
+                }
                 return
             }
 
             guard let photos = try? JSONDecoder().decode([PhotoModel].self, from: data) else {
                 print("could not decode")
-                onError(ServerError.failedToDecode)
+                DispatchQueue.main.async {
+                    onError(ServerError.failedToDecode)
+                }
                 return
             }
             DispatchQueue.main.async {

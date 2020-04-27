@@ -18,6 +18,7 @@ class MainPageViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     var photos = [PhotoModel]()
+    let service = DataProvider()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,13 +45,13 @@ class MainPageViewController: UIViewController {
     }
 
     func loadData() {
-        let service = BaseService()
-
         service.loadPhotos(onComplete: { [weak self] (photos) in
             self?.photos = photos
             print("photos count", photos.count)
             self?.tableView.reloadData()
+            // save to data base
         }) { (error) in
+            // fetch from database
             print(error.localizedDescription)
         }
     }
